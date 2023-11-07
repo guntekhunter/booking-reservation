@@ -1,0 +1,17 @@
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.login-card {
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}

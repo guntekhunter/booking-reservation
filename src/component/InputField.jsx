@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function InputField({ title, type }) {
+export default function InputField({ title, type, className }) {
   const [inputType, setInputType] = useState("text");
 
   useEffect(() => {
@@ -11,8 +11,8 @@ export default function InputField({ title, type }) {
     }
   }, [type]);
   return (
-    <div className="input-field">
-      <p className="label">{title}</p>
+    <div className={`${className} input-field`}>
+      <p className="label">{title} :</p>
       <input type={inputType} className="input-field" />
     </div>
   );

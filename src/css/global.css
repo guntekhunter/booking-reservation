@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+.content-container {
+  width: 90%;
+  padding: 2rem 0rem;
+}
+
+.main {
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-field {
+  text-align: left;
+  justify-content: space-between;
+}
+.input-field p {
+  padding-bottom: 0.5rem;
+  margin: 0;
+}
+.input-field input {
+  padding: 0.3rem 0.5rem;
+  margin: 0;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.between {
+  margin-bottom: 0.5rem;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* for the Promo Page */
+.filter {
+  padding: 0.5rem;
+}
