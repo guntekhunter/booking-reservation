@@ -1,8 +1,20 @@
 .card-promo {
-  padding: 2rem;
+  padding: 0rem;
   justify-content: center;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.container-content {
   width: 100%;
-  /* background: red; */
+}
+.content {
+  padding: 0.3rem 1.3rem;
 }
 .card-promo img {
   width: 100%;
@@ -24,4 +36,7 @@
   padding: 0;
   margin: 0;
   color: gray;
+}
+.space-x > * + * {
+  margin-left: 0.5rem;
 }

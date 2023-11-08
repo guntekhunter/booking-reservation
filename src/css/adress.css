@@ -1,0 +1,8 @@
+.card-adress {
+  display: inline-block;
+  width: 100%;
+  padding: 2rem 0rem;
+  justify-content: center;
+  display: flex;
+  /* padding: ; */
+}

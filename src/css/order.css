@@ -1,0 +1,8 @@
+.order-card {
+  display: inline-block;
+  width: 100%;
+}
+.order-card table {
+  margin-bottom: 1rem;
+  /* width: 100%; */
+}
