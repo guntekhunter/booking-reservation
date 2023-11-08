@@ -71,6 +71,8 @@
 /* for the Promo Page */
 .filter {
   padding: 0.5rem;
+  background: white;
+  color: black;
 }
 
 .mt-1 {
