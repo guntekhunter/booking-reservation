@@ -18,10 +18,6 @@ export default function Login() {
       password: password,
     };
     try {
-      console.log(data);
-      const response = await axios.post("http://localhost:3333/login", data);
-      console.log(response);
-      // navigate("/promo");
       if (data.email !== "agung@gmail.com" || data.password !== "123456") {
         setIsError(true);
       } else {
