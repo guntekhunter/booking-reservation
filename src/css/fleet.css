@@ -1,3 +1,23 @@
 .fleet {
   box-shadow: none;
+  background: white;
+  color: black;
+}
+.fleet:hover {
+  background: rgb(220, 220, 220);
+}
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Two rows with equal height */
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  gap: 10px; /* Gap between grid items */
+  height: 200px;
+}
+.grid-item {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.fleet-card {
+  display: inline-block;
 }

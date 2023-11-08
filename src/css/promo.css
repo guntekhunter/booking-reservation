@@ -37,6 +37,4 @@
   margin: 0;
   color: gray;
 }
-.space-x > * + * {
-  margin-left: 0.5rem;
-}
+

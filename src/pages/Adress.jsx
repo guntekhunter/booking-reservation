@@ -7,12 +7,20 @@ import InputField from "../component/InputField";
 import "../css/adress.css";
 import Button from "../component/Button";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Adress() {
+  const [adress, setAdress] = useState();
+  const [destination, setDestination] = useState();
   const navigate = useNavigate();
   const selectFleet = () => {
-    navigate("/fleet");
+    localStorage.setItem("adress", adress);
+    localStorage.setItem("destination", destination);
+    navigate("/order");
   };
+
+  console.log(localStorage.getItem("adress"));
+  console.log(localStorage.getItem("destination"));
   return (
     <div>
       <ContentProfider>
@@ -20,8 +28,20 @@ export default function Adress() {
         <Main>
           <Card className="card-adress">
             <div>
-              <InputField title="Adress" type="general" className="between" />
-              <InputField title="Adress" type="general" className="between" />
+              <InputField
+                title="Adress"
+                type="general"
+                className="between"
+                value={adress}
+                onChange={(e) => setAdress(e.target.value)}
+              />
+              <InputField
+                title="Destination"
+                type="general"
+                className="between"
+                value={destination}
+                onChange={(e) => setDestination(e.target.value)}
+              />
               <Button title="Send" onClick={selectFleet} />
             </div>
           </Card>

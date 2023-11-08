@@ -8,6 +8,10 @@
   display: flex;
 }
 
+.space-x > * + * {
+  margin-left: 0.5rem;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -77,4 +81,18 @@
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.status {
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
+.status-error {
+  font-size: 0.6rem;
+  color: red;
+}
+
+.hidden {
+  display: none;
 }

@@ -25,7 +25,7 @@ export default function Promo() {
     fetchPromos();
   }, []);
   const seeMore = () => {
-    navigate("/adress");
+    navigate("/fleet");
   };
 
   const handleFilter = async (type) => {

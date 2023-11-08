@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-export default function InputField({ title, type, className }) {
+export default function InputField({
+  title,
+  type,
+  className,
+  value,
+  onChange,
+}) {
   const [inputType, setInputType] = useState("text");
 
   useEffect(() => {
@@ -13,7 +19,12 @@ export default function InputField({ title, type, className }) {
   return (
     <div className={`${className} input-field`}>
       <p className="label">{title} :</p>
-      <input type={inputType} className="input-field" />
+      <input
+        type={inputType}
+        className="input-field"
+        value={value}
+        onChange={onChange}
+      />
     </div>
   );
 }

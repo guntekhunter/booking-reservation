@@ -4,11 +4,33 @@ import Button from "../component/Button";
 import Card from "../component/Card";
 import "../css/login.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Login() {
+  const [email, setEmail] = useState("agung@gmail.com");
+  const [password, setPassword] = useState("12346");
+  const [isError, setIsError] = useState(false);
   const navigate = useNavigate();
-  const handleLogin = () => {
-    navigate("/promo");
+  const handleLogin = async () => {
+    const data = {
+      email: email,
+      password: password,
+    };
+    try {
+      console.log(data);
+      const response = await axios.post("http://localhost:3333/login", data);
+      console.log(response);
+      // navigate("/promo");
+      if (data.email !== "agung@gmail.com" || data.password !== "123456") {
+        setIsError(true);
+      } else {
+        setIsError(false);
+        navigate("/promo");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div className="container-login">
@@ -17,8 +39,23 @@ export default function Login() {
           <div className="between">
             <h1>Login</h1>
           </div>
-          <InputField title="Email" type="general" className="between" />
-          <InputField title="Password" type="password" className="between" />
+          <InputField
+            title="Email"
+            type="general"
+            className="between"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <InputField
+            title="Password"
+            type="password"
+            className="between"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <div className={`status ${!isError && "hidden"}`}>
+            <p className="status-error">wrong password or email</p>
+          </div>
           <Button title="login" onClick={handleLogin} />
         </div>
       </Card>
