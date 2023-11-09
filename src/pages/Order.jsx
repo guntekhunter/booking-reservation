@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContentProfider from "../component/ContentProfider";
 import Title from "../component/Title";
 import Main from "../component/Main";
 import Card from "../component/Card";
 import "../css/order.css";
 import Button from "../component/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function Order() {
+  const [fleet, setFleet] = useState("");
+  const [adress, setAdress] = useState("");
+  const [destination, setDestination] = useState("");
+  const navigate = useNavigate();
+  useEffect(() => {
+    setAdress(localStorage.getItem("adress"));
+    setDestination(localStorage.getItem("destination"));
+    setFleet(localStorage.getItem("fleet"));
+  }, []);
+
+  const checkout = () => {
+    navigate("/wait");
+  };
   return (
     <div>
       <ContentProfider>
@@ -16,22 +30,22 @@ export default function Order() {
             <div className="order-card">
               <table className="">
                 <tr>
-                  <td>Agung</td>
+                  <td>Fleet</td>
                   <td>:</td>
-                  <td>Agung</td>
+                  <td>{fleet}</td>
                 </tr>
                 <tr>
-                  <td>Agung</td>
+                  <td>Adress</td>
                   <td>:</td>
-                  <td>Agung</td>
+                  <td>{adress}</td>
                 </tr>
                 <tr>
-                  <td>Agung</td>
+                  <td>Destination</td>
                   <td>:</td>
-                  <td>Agung</td>
+                  <td>{destination}</td>
                 </tr>
               </table>
-              <Button title="Checkout" />
+              <Button title="Checkout" onClick={checkout} />
             </div>
           </Card>
         </Main>

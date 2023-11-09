@@ -6,6 +6,7 @@ import "./css/global.css";
 import Adress from "./pages/Adress";
 import Fleet from "./pages/Fleet";
 import Order from "./pages/Order";
+import Wait from "./pages/Wait";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/adress" element={<Adress />} />
           <Route path="/fleet" element={<Fleet />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/wait" element={<Wait />} />
         </Routes>
       </BrowserRouter>
     </div>

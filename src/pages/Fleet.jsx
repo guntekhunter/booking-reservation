@@ -14,8 +14,8 @@ export default function Fleet() {
   const [fleet, setFleet] = useState();
   const navigate = useNavigate();
 
-  const order = (id) => {
-    localStorage.setItem("id-fleet", id);
+  const order = (name) => {
+    localStorage.setItem("fleet", name);
     navigate("/adress");
   };
 
@@ -86,7 +86,7 @@ export default function Fleet() {
                 <Button
                   title="Order Now"
                   className="mt-1"
-                  onClick={() => order(item.id)}
+                  onClick={() => order(item.name)}
                 />
               </Card>
             ))}
