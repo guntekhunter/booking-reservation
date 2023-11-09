@@ -8,6 +8,16 @@
   display: flex;
 }
 
+.block {
+  display: inline-block !important;
+}
+.full {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+
 .space-x > * + * {
   margin-left: 0.5rem;
 }
@@ -106,4 +116,43 @@
 
 .hidden {
   display: none;
+}
+
+.fleet-info {
+  color: rgb(51, 196, 51);
+  font-size: 0.7rem;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Semi-transparent background overlay */
+}
+
+/* Style for the modal content */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }

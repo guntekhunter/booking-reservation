@@ -20,4 +20,21 @@
 }
 .fleet-card {
   display: inline-block;
+  padding: 1rem 0rem;
+  font-size: 0.6rem;
+}
+
+.fleet-card .title {
+  font-weight: bold;
+}
+
+.fleet-card .text-container {
+  text-align: left;
+  padding: 0rem 2rem;
+}
+
+.fleet-card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }

@@ -14,8 +14,8 @@ export default function Fleet() {
   const [fleet, setFleet] = useState();
   const navigate = useNavigate();
 
-  const order = (id) => {
-    localStorage.setItem("id-fleet", id);
+  const order = (name) => {
+    localStorage.setItem("fleet", name);
     navigate("/adress");
   };
 
@@ -82,11 +82,15 @@ export default function Fleet() {
           <div className="grid">
             {fleet?.map((item, key) => (
               <Card className="grid-item fleet-card" key={key}>
-                {item.name}
+                <img src={`/${item.image}`} alt="" />
+                <div className="text-container">
+                  <p className="title">{item.name}</p>
+                  <p>{item.seats} seats</p>
+                </div>
                 <Button
                   title="Order Now"
                   className="mt-1"
-                  onClick={() => order(item.id)}
+                  onClick={() => order(item.name)}
                 />
               </Card>
             ))}

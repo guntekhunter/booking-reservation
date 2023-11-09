@@ -18,9 +18,6 @@ export default function Adress() {
     localStorage.setItem("destination", destination);
     navigate("/order");
   };
-
-  console.log(localStorage.getItem("adress"));
-  console.log(localStorage.getItem("destination"));
   return (
     <div>
       <ContentProfider>

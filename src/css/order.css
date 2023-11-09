@@ -1,8 +1,38 @@
-.order-card {
+/* .order-card {
   display: inline-block;
   width: 100%;
 }
 .order-card table {
   margin-bottom: 1rem;
-  /* width: 100%; */
+  width: 100%;
+} */
+
+.order-card {
+  padding: 0.1rem; /* Add padding to the container */
+}
+
+.order-card table {
+  width: 100%;
+  margin-bottom: 0.2rem; /* Add space below the table */
+}
+
+.order-card tr {
+  line-height: 1.5; /* Adjust the line height for better spacing */
+}
+
+.order-card td {
+  padding: 5px 10px; /* Add padding to the table cells */
+}
+
+/* Optional: Style the button */
+.order-card Button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.order-card Button:hover {
+  background-color: #0056b3;
 }
